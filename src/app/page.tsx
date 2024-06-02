@@ -73,7 +73,7 @@ console.log(data)
       <div className="bg-white/25 w-full flex flex-col h-fit">
         <div className="flex flex-col justify-between md:flex-row items-center p-12">
           <Input handleSearch = {handleSearch} setLocation = {setLocation}/>
-          <h1 className="mb-8 md:mb-0 order-1 text-white py-2 px-4 rounded-xl italic font-bold">Wheather Update</h1>
+          <h1 className="mb-8 text-2xl md:mb-0 order-1 text-white py-2 px-4 rounded-xl italic font-bold">Wheather Update</h1>
         </div>
         {content}
       </div>
