@@ -10,6 +10,18 @@ interface inputProps  {
 
 export const Input = ({handleSearch, setLocation}: inputProps) => {
 
+  const handleKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === "Enter") {
+      e.preventDefault(); // Prevent form submission
+      if (input === "") {
+        alert("Input field is empty");
+      } else {
+        handleSearch();
+        setInput("");
+      }
+    }
+  };
+
   const [input, setInput] = useState("")
 
   return (
@@ -20,6 +32,7 @@ export const Input = ({handleSearch, setLocation}: inputProps) => {
         onChange={(e)=> {setLocation(e.target.value) 
         setInput(e.target.value)}}
         value={input}
+        onKeyDown={handleKeyPress}
          />
 
         <div onClick={()=>{ 
