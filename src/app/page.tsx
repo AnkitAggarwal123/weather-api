@@ -15,12 +15,8 @@ export default function Home() {
   const [error, setError] = useState("")
 
 
-  const handleSearch = async(e: React.KeyboardEvent<HTMLInputElement>)=>{
-    if(e.key === "Enter"){
-      e.preventDefault()
+  const handleSearch = async()=>{
       try{
-
-
         const response = await fetch(`/api/${location}`)
         console.log('Response Status:', response.status);
   
@@ -37,7 +33,6 @@ export default function Home() {
         setError("City not found")
         setData({})
       }
-    }
 
   }
 
