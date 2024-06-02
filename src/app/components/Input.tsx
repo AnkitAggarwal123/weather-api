@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { AiOutlineSearch } from "react-icons/ai";
 
 interface inputProps  {
-    handleSearch: (event: React.KeyboardEvent<HTMLInputElement>) => void
+    handleSearch: () => void
     setLocation: React.Dispatch<React.SetStateAction<string>>
 }
 
